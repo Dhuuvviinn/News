@@ -2,55 +2,118 @@ import React, { Component } from 'react';
 import Navbar from './Component/Navbar';
 import News from './Component/News';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 export default class App extends Component {
-  name = 'john';
+  pageSize = 9;
+  apikey = process.env.React_App_Api;
   render() {
     return (
       <BrowserRouter>
         <Navbar />
+
         <Routes>
           <Route
             exact
             path='/'
-            element={<News key='general' pageSize={5} category='general' />}
+            element={
+              <News
+                apikey={this.apikey}
+                setprogress={this.setprogress}
+                key='general'
+                pageSize={this.pageSize}
+                category='general'
+              />
+            }
           />
           <Route
             exact
             path='/business'
-            element={<News key='business' pageSize={5} category='business' />}
+            element={
+              <News
+                apikey={this.apikey}
+                setprogress={this.setprogress}
+                key='business'
+                pageSize={this.pageSize}
+                category='business'
+              />
+            }
           />
           <Route
             exact
             path='/entertainment'
             element={
-              <News key='entertainment' pageSize={5} category='entertainment' />
+              <News
+                apikey={this.apikey}
+                setprogress={this.setprogress}
+                key='entertainment'
+                pageSize={this.pageSize}
+                category='entertainment'
+              />
             }
           />
           <Route
             exact
             path='/general'
-            element={<News key='general' pageSize={5} category='general' />}
+            element={
+              <News
+                apikey={this.apikey}
+                setprogress={this.setprogress}
+                key='general'
+                pageSize={this.pageSize}
+                category='general'
+              />
+            }
           />
           <Route
             exact
             path='/health'
-            element={<News key='health' pageSize={5} category='health' />}
+            element={
+              <News
+                apikey={this.apikey}
+                setprogress={this.setprogress}
+                key='health'
+                pageSize={this.pageSize}
+                category='health'
+              />
+            }
           />
           <Route
             exact
             path='/science'
-            element={<News key='science' pageSize={5} category='science' />}
+            element={
+              <News
+                apikey={this.apikey}
+                setprogress={this.setprogress}
+                key='science'
+                pageSize={this.pageSize}
+                category='science'
+              />
+            }
           />
           <Route
             exact
             path='/sports'
-            element={<News key='sports' pageSize={5} category='sports' />}
+            element={
+              <News
+                apikey={this.apikey}
+                setprogress={this.setprogress}
+                key='sports'
+                pageSize={this.pageSize}
+                category='sports'
+              />
+            }
           />
           <Route
             exact
             path='/technology'
             element={
-              <News key='technology' pageSize={5} category='technology' />
+              <News
+                apikey={this.apikey}
+                setprogress={this.setprogress}
+                key='technology'
+                pageSize={this.pageSize}
+                category='technology'
+              />
             }
           />
         </Routes>
